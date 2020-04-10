@@ -1,11 +1,11 @@
 # Heart of Darkness - WinRT / UWP
 
-## Requirements
+## Build from source
+
+### Requirements
 
 * Visual Studio 2019
 * VS needs UWP / WinRT support support enabled
-
-## Build
 
 ### Clone the repo and its dependencies
 
