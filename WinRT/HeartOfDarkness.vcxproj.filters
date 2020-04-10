@@ -224,93 +224,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Media Include="data\Dark_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Dark_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Dark_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Fort_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Fort_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Fort_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Isld_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Isld_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Isld_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lar1_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lar1_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lar1_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lar2_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lava_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lar2_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lar2_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lava_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Lava_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Pwr1_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Pwr1_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Pwr1_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Pwr2_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Pwr2_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Pwr2_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Rock_hod.lvl">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Rock_hod.mst">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Rock_hod.sss">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\Setup.dat">
-      <Filter>data</Filter>
-    </Media>
-    <Media Include="data\hod.paf" />
-  </ItemGroup>
-  <ItemGroup>
     <Image Include="Assets\Square44x44Logo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
@@ -320,5 +233,8 @@
     <Image Include="Assets\StoreLogo.scale-200.png">
       <Filter>Assets</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="data\.keep" />
   </ItemGroup>
 </Project>

@@ -42,8 +42,8 @@
     <MinimumVisualStudioVersion>14.0</MinimumVisualStudioVersion>
     <AppContainerApplication>true</AppContainerApplication>
     <ApplicationType>Windows Store</ApplicationType>
-    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
-    <WindowsTargetPlatformMinVersion>10.0.17763.0</WindowsTargetPlatformMinVersion>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.10240.0</WindowsTargetPlatformMinVersion>
     <ApplicationTypeRevision>10.0</ApplicationTypeRevision>
     <AppxPackageSigningEnabled>false</AppxPackageSigningEnabled>
   </PropertyGroup>
@@ -198,122 +198,7 @@
     <ClInclude Include="..\video.h" />
   </ItemGroup>
   <ItemGroup>
-    <Media Include="data\Dark_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Dark_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Dark_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Fort_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Fort_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Fort_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Isld_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Isld_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Isld_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lar1_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lar1_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lar1_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lar2_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lar2_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lar2_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lava_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lava_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Lava_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Pwr1_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Pwr1_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Pwr1_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Pwr2_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Pwr2_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Pwr2_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Rock_hod.lvl">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Rock_hod.mst">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Rock_hod.sss">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-    <Media Include="data\Setup.dat">
-      <DeploymentContent>true</DeploymentContent>
-      <FileType>Document</FileType>
-    </Media>
-  </ItemGroup>
-  <ItemGroup>
-    <Media Include="data\hod.paf">
-      <DeploymentContent>true</DeploymentContent>
+    <Media Include="data\.keep">
       <FileType>Document</FileType>
     </Media>
   </ItemGroup>
