@@ -102,6 +102,12 @@
       <CompileAsWinRT>true</CompileAsWinRT>
     </ClCompile>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup>
+    <PostBuildEvent>
+      <Command>xcopy /y "$(ProjectDir)data\*"  "$(OutDir)\data\"</Command>
+      <Message>Copying data files</Message>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <Image Include="Assets\SplashScreen.scale-400.png" />
     <Image Include="Assets\SplashScreen.scale-200.png" />
