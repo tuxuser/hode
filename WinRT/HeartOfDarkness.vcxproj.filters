@@ -237,4 +237,7 @@
   <ItemGroup>
     <Media Include="data\.keep" />
   </ItemGroup>
+  <ItemGroup>
+    <Media Include="hode.ini" />
+  </ItemGroup>
 </Project>
