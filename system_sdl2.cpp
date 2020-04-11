@@ -125,8 +125,9 @@ void System_SDL2::init(const char *title, int w, int h, bool fullscreen, bool wi
 	_joystick = 0;
 	_controller = 0;
 	const int count = SDL_NumJoysticks();
+	// Always init gamecontroller mappings
+	SDL_GameControllerAddMappingsFromFile("gamecontrollerdb.txt");
 	if (count > 0) {
-		SDL_GameControllerAddMappingsFromFile("gamecontrollerdb.txt");
 		for (int i = 0; i < count; ++i) {
 			if (SDL_IsGameController(i)) {
 				_controller = SDL_GameControllerOpen(i);
@@ -439,6 +440,34 @@ void System_SDL2::processEvents() {
 	pad.prevMask = pad.mask;
 	while (SDL_PollEvent(&ev)) {
 		switch (ev.type) {
+#if defined(__WINRT__)
+		case SDL_CONTROLLERDEVICEADDED:
+			if (!_controller)
+			{
+				_controller = SDL_GameControllerOpen(ev.cdevice.which);
+				if (_controller) {
+					fprintf(stdout, "Using controller '%s'\n", SDL_GameControllerName(_controller));
+					break;
+				}
+			}
+			else
+			{
+				warning("processEvents: Controller is already opened, not overwriting with new one");
+			}
+			break;
+		case SDL_CONTROLLERDEVICEREMOVED:
+			if (_controller)
+			{
+				SDL_GameControllerClose(_controller);
+				_controller = 0;
+				fprintf(stdout, "processEvents: Closed controller: %i", ev.cdevice.which);
+			}
+			else
+			{
+				warning("processEvents: Controller %i is not opened, cannot be removed.");
+			}
+			break;
+#endif
 		case SDL_KEYUP:
 			if (ev.key.keysym.sym == SDLK_s) {
 				inp.screenshot = true;
