@@ -1,5 +1,7 @@
 # Heart of Darkness - WinRT / UWP
 
+[![GitHub Workflow - Build](https://img.shields.io/github/workflow/status/tuxuser/hode/build?label=build)](https://github.com/tuxuser/hode/actions?query=workflow%3Abuild)
+
 ## Build from source
 
 ### Requirements
