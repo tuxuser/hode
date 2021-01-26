@@ -144,11 +144,26 @@ int main(int argc, char *argv[]) {
 	/*
 	For durango:
 	savePath: U:\\Users\\UserMgr0\\AppData\\Local\\Packages\\2bfa4c65-5b83-4a27-be98-3d3279288eb4_nh20k94c8ngfj\\LocalState
-	dataPath: D:\\DevelopmentFiles\\2bfa4c65-5b83-4a27-be98-3d3279288eb4VS.Debug_x64.dev\\data
+	dataPath: U:\\Users\\UserMgr0\\AppData\\Local\\Packages\\2bfa4c65-5b83-4a27-be98-3d3279288eb4_nh20k94c8ngfj\\LocalState\\data
 
 	COPY the gamedata to dataPath, no subfolders
 	*/
-	Platform::String^ data_dir = Windows::ApplicationModel::Package::Current->InstalledLocation->Path + L"\\data";
+	
+	Platform::String^ data_dir;
+	auto folder = Windows::Storage::StorageFolder::GetFolderFromPathAsync(Windows::ApplicationModel::Package::Current->InstalledLocation->Path + L"\\data");
+	while (folder->Status == Windows::Foundation::AsyncStatus::Started)
+	{
+
+	}
+	if (folder->Status == Windows::Foundation::AsyncStatus::Completed)
+	{
+		data_dir = Windows::ApplicationModel::Package::Current->InstalledLocation->Path + L"\\data";
+	}
+	else 
+	{
+		data_dir = Windows::Storage::ApplicationData::Current->LocalFolder->Path + L"\\data";
+	}
+
 	Platform::String^ save_dir = Windows::Storage::ApplicationData::Current->LocalFolder->Path;
 	wcstombs(dataPath, data_dir->Data(), _MAX_PATH);
 	wcstombs(savePath, save_dir->Data(), _MAX_PATH);
