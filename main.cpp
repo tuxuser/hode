@@ -148,7 +148,22 @@ int main(int argc, char *argv[]) {
 
 	COPY the gamedata to dataPath, no subfolders
 	*/
-	Platform::String^ save_dir = Windows::Storage::ApplicationData::Current->LocalFolder->Path + L"\\data";
+	
+	Platform::String^ data_dir;
+	auto folder = Windows::Storage::StorageFolder::GetFolderFromPathAsync(Windows::ApplicationModel::Package::Current->InstalledLocation->Path + L"\\data");
+	while (folder->Status == Windows::Foundation::AsyncStatus::Started)
+	{
+
+	}
+	if (folder->Status == Windows::Foundation::AsyncStatus::Completed)
+	{
+		data_dir = Windows::ApplicationModel::Package::Current->InstalledLocation->Path + L"\\data";
+	}
+	else 
+	{
+		data_dir = Windows::Storage::ApplicationData::Current->LocalFolder->Path + L"\\data";
+	}
+
 	Platform::String^ save_dir = Windows::Storage::ApplicationData::Current->LocalFolder->Path;
 	wcstombs(dataPath, data_dir->Data(), _MAX_PATH);
 	wcstombs(savePath, save_dir->Data(), _MAX_PATH);
